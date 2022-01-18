@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="asset/style.css" /> {% endblock %}
+</head>
+
+<body>
+
+
+
+
+    {% block product %}
+    <div class="box">
+        {% for user in users %}
+        <div class="block">
+            <img class="img" src="asset/image/{{ user.img }}" />
+            <h3>{{ user.adi|capitalize}}</h3>
+            <h3>{{ user.fiyat}}</h3>
+
+            <button>Sepete Ekle</button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+   
+  
+        
+   
+</body>
+
+</html>
